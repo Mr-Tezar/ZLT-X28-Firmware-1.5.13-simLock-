@@ -1,6 +1,6 @@
 #!/bin/sh
 mount -o remount,rw /
-wget https://github.com/mahdigh782/Unlock-ZLT-X28/raw/refs/heads/main/x28.tgz -O /tmp/x28.tgz
+mv ./x28.tgz /tmp/x28.tgz
 hash=$(md5sum /tmp/x28.tgz | awk '{print $1}')
 if [ $hash == '1468b8686d86b34337c1ee0086a42a76' ]
 then
