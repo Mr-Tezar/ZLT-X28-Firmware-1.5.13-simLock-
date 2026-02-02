@@ -1,0 +1,20 @@
+#!/bin/sh
+mount -o remount,rw /
+wget https://github.com/mahdigh782/Unlock-ZLT-X28/raw/refs/heads/main/x28.tgz -O /tmp/x28.tgz
+hash=$(md5sum /tmp/x28.tgz | awk '{print $1}')
+if [ $hash == '1468b8686d86b34337c1ee0086a42a76' ]
+then
+rm -rf /mnt/data/etc/tzcfg/update_config
+cp /mnt/data/etc/tzcfg/main_config /mnt/data/etc/tzcfg/main_config.bk
+cp /tzwww/cgi-bin/http.cgi /tzwww/cgi-bin/http.cgi.bk
+cp /usr/bin/mtk_netagent /usr/bin/mtk_netagent.bk
+kill `ps | grep mtk_netagent | awk '{print $1}'`
+tar -xzvf /tmp/x28.tgz -C /
+/usr/bin/mtk_netagent &
+sleep 3
+reboot
+exit
+else
+echo "not same hash"
+exit
+fi
