@@ -109,5 +109,6 @@ Done.
 ## Repository Link
 
 📌 [https://github.com/mahdigh782/Unlock-ZLT-X28](https://github.com/mahdigh782/Unlock-ZLT-X28)
+📌 [https://youtu.be/fveMqGHRkNQ?si=9anquYVuSWbdtyN2](https://youtu.be/fveMqGHRkNQ?si=9anquYVuSWbdtyN2)
 
 ---
