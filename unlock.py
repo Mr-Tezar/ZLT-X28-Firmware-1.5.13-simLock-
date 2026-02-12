@@ -15,7 +15,8 @@ RESET = "\033[0m"
 LIGHT_BLUE = "\033[1;34m"
 # ========= INPUT =========
 clear_screen()
-print(f"""{LIGHT_BLUE}
+def banner():
+    print(f"""{LIGHT_BLUE}
 ████████╗ ██╗ ██╗  ██╗ ███████╗  ██████╗  ██╗ ████████╗
 ╚══██╔══╝ ██║ ██║  ██║ ██╔════╝ ██╔════╝  ██║ ╚══██╔══╝
    ██║    ██║ ███████║ ███████╗ ██║  ███╗ ██║    ██║   
@@ -30,6 +31,8 @@ print(f"""{LIGHT_BLUE}
 
 {RED}Use at your own risk. Read the steps carefully.{RESET}
 """)
+
+banner()
 ip = input(f"Enter modem IP: {LIGHT_BLUE}").strip()
 session_id = input(f"{RESET}Enter session ID: {LIGHT_BLUE}").strip()
 print(RESET)
@@ -413,8 +416,8 @@ def status():
         shell = "Enable" if ("Enable" in (ssh_status, telnet_status)) else "Disable"
 try:
     while True:
-        # clear_screen()
-        print("\n=========================== TIHSG-IT =============  Dev_By >> Mr-Tezar  ==============")
+        clear_screen()
+        banner()
         status()
         print("\n========= MENU =========")
         print("1) Enable WAN")
