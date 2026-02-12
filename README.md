@@ -14,6 +14,13 @@ The quick method is added **on top**, for convenience.
 
 ## 🚀 QUICK METHOD (Recommended)
 
+Before running the script, make sure **Python 3** is installed and install the required libraries:
+
+```bash
+pip install requests
+pip install paramiko
+```
+
 This method is designed for users who want the **fastest and safest** unlock with minimal manual work.
 
 ### Tool
