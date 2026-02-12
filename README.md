@@ -223,7 +223,6 @@ Done.
 
 ## 📌 Repository & Video Guide
 
-📌 https://github.com/mahdigh782/Unlock-ZLT-X28  
 📌 https://youtu.be/fveMqGHRkNQ?si=9anquYVuSWbdtyN2
 
 ---
