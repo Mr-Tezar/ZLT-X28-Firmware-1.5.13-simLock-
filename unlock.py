@@ -15,7 +15,21 @@ RESET = "\033[0m"
 LIGHT_BLUE = "\033[1;34m"
 # ========= INPUT =========
 clear_screen()
-print("\n=========================== TIHSG-IT ===========================")
+print(f"""{LIGHT_BLUE}
+████████╗ ██╗ ██╗  ██╗ ███████╗  ██████╗  ██╗ ████████╗
+╚══██╔══╝ ██║ ██║  ██║ ██╔════╝ ██╔════╝  ██║ ╚══██╔══╝
+   ██║    ██║ ███████║ ███████╗ ██║  ███╗ ██║    ██║   
+   ██║    ██║ ██╔══██║ ╚════██║ ██║   ██║ ██║    ██║   
+   ██║    ██║ ██║  ██║ ███████║ ╚██████╔╝ ██║    ██║   
+   ╚═╝    ╚═╝ ╚═╝  ╚═╝ ╚══════╝  ╚═════╝  ╚═╝    ╚═╝   
+
+            ZLT-X28 Auto Unlock Tool
+{RESET}
+{GREEN}GitHub  : https://github.com/Mr-Tezar{RESET}
+{GREEN}YouTube : TIHSG-IT{RESET}
+
+{RED}Use at your own risk. Read the steps carefully.{RESET}
+""")
 ip = input(f"Enter modem IP: {LIGHT_BLUE}").strip()
 session_id = input(f"{RESET}Enter session ID: {LIGHT_BLUE}").strip()
 print(RESET)

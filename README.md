@@ -1,3 +1,102 @@
+# ZLT-X28 Firmware 1.5.13 – Unlock Guide (Quick & Advanced)
+
+![unlock script](unlock_script.png)
+
+This repository provides **two complete methods** to unlock the **ZLT‑X28 modem (Firmware 1.5.13)**:
+
+- **Quick Method** – Automated, menu‑based script for fast unlocking
+- **Advanced Method** – Manual, low‑level steps for experienced users
+
+Nothing from the original manual method has been removed.  
+The quick method is added **on top**, for convenience.
+
+---
+
+## 🚀 QUICK METHOD (Recommended)
+
+This method is designed for users who want the **fastest and safest** unlock with minimal manual work.
+
+### Tool
+
+```
+unlock.py
+```
+
+Run the script:
+
+```bash
+python unlock.py
+```
+
+The script is fully interactive and guides you step by step.
+
+---
+
+### 🔧 Quick Method – Workflow
+
+Before starting, you must manually obtain:
+
+- **Modem IP address**
+- **Session ID** (from browser DevTools → Network tab)
+
+If the session ID expires, you can re‑enter it inside the script.
+
+---
+
+### Script Menu Steps
+
+**1) Enable WAN**
+- Enables WAN mode
+- ⚠️ Connect **LAN Port 1** of the ZLT‑X28 to another modem or router **with active internet**
+
+**2) Set Session ID**
+- Re‑enter session ID if it changes or expires
+
+**3) Enable Shell Access**
+- Enables Telnet and SSH using API command injection
+
+**4) Set Web Theme (Optional)**
+- Change modem UI theme and logo
+
+**5) Set Super Admin Credentials**
+
+Default:
+```
+Username: super
+Password: super
+```
+
+You may change them here.
+
+**6) Apply Configs & Unlock**
+- Writes full configuration
+- Removes operator lock
+
+If this step fails:
+- Power off the modem
+- Power on and retry
+
+**7) Factory Reset**
+- Performs automatic factory reset and reboot
+
+If unlock does not persist:
+- Perform manual factory reset from web UI
+- Or use the physical reset button
+
+**8) SSH Root Shell Access**
+- Opens full root shell via SSH
+
+If step 6 or 8 fails:
+- Power cycle the modem and retry
+
+---
+
+## 🧠 ADVANCED METHOD (Manual / Original Guide)
+
+This section is intended for **advanced users** who prefer full manual control.
+
+---
+
 ## ZLT-X28 Firmware 1.5.13 + Unlock Guide
 
 This repository contains:
@@ -5,7 +104,7 @@ This repository contains:
 * **Main firmware for ZLT-X28 (version 1.5.13)**
 * **Unlock script**
 
-> **All required files, including the unlock script, are provided in this repository.**
+> **All required files, including the unlock script, are provided in this repository.**  
 > You do NOT need to download anything from external sources.
 
 ---
@@ -83,32 +182,57 @@ ssh -o HostKeyAlgorithms=+ssh-rsa admin@192.168.70.1
 
 ---
 
-## Unlocking the Modem
+## Unlocking the Modem (Manual)
 
-1. **Download the unlock script from this repository x28 , x28tgz**
-2. Copy the file to the modem (SCP, local web server, or any method you prefer)
+1. **Transfer the unlock files to the modem using WinSCP**
+
+   - Open **WinSCP**
+   - Protocol: **SCP**
+   - Host name: modem IP address (e.g. `192.168.70.1`)
+   - Username: `admin`
+   - Password: `admin`
+   - Port: `22`
+
+   Copy the following files from this repository to the modem:
+   - `x28`
+   - `x28.tgz`
+
+   You may place them in `/tmp` or any writable directory.
+
+2. **Connect to the modem via SSH**
+
 3. Make the script executable:
 
 ```bash
 chmod +x x28
 ```
 
-4. Execute the script
+4. Execute the unlock script:
 
 ```bash
 sh x28
 ```
 
-5. The modem will reboot
+5. The modem will reboot automatically
+
 6. After boot, perform **one Factory Reset**
 
 Done.
 
 ---
 
-## Repository Link
+## 📌 Repository & Video Guide
 
-📌 [https://github.com/mahdigh782/Unlock-ZLT-X28](https://github.com/mahdigh782/Unlock-ZLT-X28)
-📌 [https://youtu.be/fveMqGHRkNQ?si=9anquYVuSWbdtyN2](https://youtu.be/fveMqGHRkNQ?si=9anquYVuSWbdtyN2)
+📌 https://github.com/mahdigh782/Unlock-ZLT-X28  
+📌 https://youtu.be/fveMqGHRkNQ?si=9anquYVuSWbdtyN2
 
 ---
+
+## ⚠️ Final Notes
+
+- Always follow steps in order
+- WAN internet is required during unlock
+- Factory reset is mandatory
+
+If the unlock does not persist, the issue is almost always a skipped reset or expired session ID.
+
