@@ -1,22 +1,3 @@
-# ZLT-X28 Firmware 1.5.13 – Unlock Guide (Quick & Advanced)
-
-![unlock script](unlock.png)
-
-This repository provides **two complete methods** to unlock the **ZLT‑X28 modem (Firmware 1.5.13)**:
-
-- **Advanced Method** – Manual, low‑level steps for experienced users
-
-Nothing from the original manual method has been removed.  
-The quick method is added **on top**, for convenience.
-
----
-
-## 🧠 ADVANCED METHOD (Manual / Original Guide)
-
-This section is intended for **advanced users** who prefer full manual control.
-
----
-
 ## ZLT-X28 Firmware 1.5.13 + Unlock Guide
 
 This repository contains:
